@@ -87,7 +87,7 @@ public class BillUtils {
             //累加金額
             orgPrice+=tmpOrgPrice;
 
-            //添加至賬單
+            //添加至票機賬單
             BillDetail billDetail = new BillDetail(tmpProduct.getBarCode(),strTitle,strSpend,tmpOrgPrice);
             billDetailList.add(billDetail);
         }
@@ -95,7 +95,7 @@ public class BillUtils {
         Bill bill = new Bill(billDetailList,orgPrice);
         if(isPromotion){ //如果促消價
             //計算促銷價
-            double tmpPrePromotionPrice=((orgPrice/spend)*offer);
+            double tmpPrePromotionPrice=((int)(orgPrice/spend)*offer);
             promotionPrice = orgPrice-tmpPrePromotionPrice;
             bill.setPromotionPrice(promotionPrice);
         }

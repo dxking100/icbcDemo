@@ -120,7 +120,7 @@ class IcbcDemoApplicationTests {
         //0.開機
         System.out.println("-----開機");
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddhhmmss");
-        machine.startWithDisount(format.parse("20250211121111"),format.parse("20250211163000") , CURRENCY.MOP);
+        machine.startWithDisount(format.parse("20250211121111"),format.parse("20250219163000") , CURRENCY.MOP);
 
         System.out.println("-----上架商品");
         //1.設定產品單價
@@ -213,7 +213,7 @@ class IcbcDemoApplicationTests {
         //0.開機
         System.out.println("-----開機");
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddhhmmss");
-        machine.startWithDisountAndPromotion(format.parse("20250211121111"),format.parse("20250211163000"),100,10, CURRENCY.MOP);
+        machine.startWithDisountAndPromotion(format.parse("20250211121111"),format.parse("20250219163000"),100,10, CURRENCY.MOP);
 
 
         System.out.println("-----上架商品");
